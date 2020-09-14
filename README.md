@@ -1,9 +1,8 @@
 # Matrix-Class
 Matrix Class for C++ including a stable and smart inverse.
 
-Efficient implementation of a C++ matrix (and vector) class.
-
-The implementation provides the following auxiliary operators:
+Efficient implementation of a C++ matrix (and vector) class. 
+The implementation provides the following operators on matrices and vectors:
 
 \+ adds matrices or vectors,
 
