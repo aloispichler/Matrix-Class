@@ -18,7 +18,7 @@ The implementation provides the following operators on matrices and vectors:
 
 \* multiply matrices,
 
-\\ solves a linear system: this major implementation employs Householder reflections to efficiently find the solution of the linear system A\*x= b.
-The implementation works for rank deficient and rectangular matrices.
-For regular matrices, the solution is x= A<sup>-1</sup> b; for singular matrices, x= A<sup>\+</sup>b, where A<sup>\+</sup> is the (possibly rank deficient) pseudoinverse. The decomposition can be reused (recycled).
+\/ solves a linear system: this main implementation of the class employs Householder reflections (one of the top 10 algorithms of the 20th century) to efficiently find the solution of the linear system A\*x= b.
+The rank-revealing implementation works for rank deficient and rectangular matrices.
+For regular matrices, the solution is x= A<sup>-1</sup> b; for singular matrices, x= A<sup>\+</sup>b, where A<sup>\+</sup> is the (possibly rank deficient) pseudoinverse. The second decomposition is efficient by exploiting the structure of the resulting matrix. The decomposition can be reused (recycled).
 The complete orthogonal decomposition pivots the rows, cf. [notes](https://www.tu-chemnitz.de/mathematik/fima/public/mathematischeStatistik.pdf#page=113).
