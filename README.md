@@ -1,5 +1,5 @@
 # Matrix-Class
-Matrix Class for C++ including stable and smart inverse.
+Matrix Class for C++ including a stable and smart inverse.
 
 Efficient implementation of a C++ matrix (and vector) class.
 The implementation provides the following auxiliary operations:
@@ -8,15 +8,16 @@ The implementation provides the following auxiliary operations:
 
 \+ adds a scalars to a vector,
 
-\+ adds a scalar on the matrix diagonal,
+\+ adds the identity matrix,
 
-\- subtracts matrices or vectors
+\- subtracts matrices or vectors,
 
-\- subtracts a scalar from a vector
+\- subtracts a scalar from a vector,
 
-\- subtracts the identity of a matrix
+\- subtracts the identity of a matrix,
 
-\* multiply matrices
+\* multiply matrices,
 
-\\ solve a linear system: This major implementation employs Householder reflections to find the solution of the linear system A\*x= b.
-The implementation works for rank deficient and rectangular matrices. For regular matrices, the solution is x= A<sup>-1</sup> b; for singular matrices, x= A<sup>\+</sup>b, where A<sup>\+</sup> is the (possibly rank deficient) pseudoinverse. The decomposition can be reused (recycled).
+\\ solve a linear system: this major implementation employs Householder reflections to efficiently find the solution of the linear system A\*x= b.
+The implementation works for rank deficient and rectangular matrices.
+For regular matrices, the solution is x= A<sup>-1</sup> b; for singular matrices, x= A<sup>\+</sup>b, where A<sup>\+</sup> is the (possibly rank deficient) pseudoinverse. The decomposition can be reused (recycled).
