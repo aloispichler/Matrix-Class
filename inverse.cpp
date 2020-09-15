@@ -1,12 +1,18 @@
-/*	This algorithm provides a complete orthogonal decomposition by pivoting the rows,
+/*	Householder: one of the top 10 algorithm of the 20th century.
+	This algorithm provides a complete orthogonal decomposition by pivoting the rows,
 	see https://www.tu-chemnitz.de/mathematik/fima/public/mathematischeStatistik.pdf#page=113
 	For column pivoting and complete orthogonal decomposition
 	cf. https://www.math.usm.edu/lambers/mat610/sum10/lecture11.pdf
 */
 
+//	© 2020, Alois Pichler
+/*	Decompose the Matrix A so that A= P* Q2* L* Q1.
+		P is a permutation,
+		Q1 and Q2 are orthogonal Householders,
+		L is lower tridiagonal and regular with rank k.
+		The rank-deficient/ rank-revealing complete orthogonal decomposition is in-place and can be recycled.
+*/
 
-//	Decompose the Matrix A so that A= P* Q2* L* Q1.
-//	The decomposition can be recycled.
 
 QResult decomposeQRQ(Matrix &A, double aTol= 1e-6)	//	QRQ 
 {	QResult QRQ; QRQ.Mat= A;			// in-place decomposition. check: Is this A?
